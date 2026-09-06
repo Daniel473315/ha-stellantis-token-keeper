@@ -1,3 +1,7 @@
+## 0.1.3
+
+- Supervisor watchdog URL (`/health`), so a hung worker is restarted, not only a dead container
+
 ## 0.1.2
 
 - Status reports the real add-on version
