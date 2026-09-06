@@ -1,3 +1,8 @@
+## 0.1.2
+
+- Status reports the real add-on version
+- Docs list the actual entity ids
+
 ## 0.1.1
 
 - `email` and `password` options may be empty, so the add-on starts as a plain login

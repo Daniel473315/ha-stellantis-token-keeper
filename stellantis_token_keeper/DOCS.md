@@ -51,13 +51,13 @@ automatic mode works from any device, including the phone.
 
 Device *Stellantis Token Keeper*:
 
-| Entity | Content |
+| Entity (IDs follow the German names) | Content |
 |---|---|
 | `binary_sensor.stellantis_token_keeper_problem` | `on` when the last check failed or re-authentication did not succeed |
-| `sensor.stellantis_token_keeper_last_check` | time of the last watchdog check |
-| `sensor.stellantis_token_keeper_last_reauth` | time of the last successful automatic re-authentication |
-| `sensor.stellantis_token_keeper_last_login` | time of the last successful browser login |
-| `sensor.stellantis_token_keeper_last_message` | last result as text, full status as attributes |
+| `sensor.stellantis_token_keeper_letzte_prufung` | time of the last watchdog check |
+| `sensor.stellantis_token_keeper_letzte_neuanmeldung` | time of the last successful automatic re-authentication |
+| `sensor.stellantis_token_keeper_letzter_browser_login` | time of the last successful browser login |
+| `sensor.stellantis_token_keeper_letzte_meldung` | last result as text, full status as attributes |
 
 Build your notification automation on the `problem` binary sensor.
 
