@@ -1,0 +1,7 @@
+build_from:
+  amd64: ghcr.io/home-assistant/amd64-base-debian:bookworm
+  aarch64: ghcr.io/home-assistant/aarch64-base-debian:bookworm
+labels:
+  org.opencontainers.image.title: Stellantis Token Keeper
+  org.opencontainers.image.source: https://github.com/MarkusReuter/ha-stellantis-token-keeper
+  org.opencontainers.image.licenses: MIT

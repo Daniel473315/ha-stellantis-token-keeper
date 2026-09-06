@@ -1,0 +1,41 @@
+name: "Stellantis Token Keeper"
+version: "0.1.0"
+slug: "stellantis_token_keeper"
+description: "Self-hosted OAuth login worker and automatic re-authentication for the Stellantis Vehicles integration"
+url: "https://github.com/MarkusReuter/ha-stellantis-token-keeper"
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: services
+boot: auto
+homeassistant_api: true
+services:
+  - mqtt:want
+ports:
+  3000/tcp: 3000
+ports_description:
+  3000/tcp: "Login worker API. Use http://<ha-ip>:3000 as 'Login service URL' in the integration."
+options:
+  email: ""
+  password: ""
+  check_interval_hours: 4
+  reload_probe: true
+  remote_commands: false
+  login_timeout_seconds: 90
+  log_level: info
+schema:
+  email: email
+  password: password
+  check_interval_hours: "int(1,48)"
+  reload_probe: bool
+  remote_commands: bool
+  login_timeout_seconds: "int(30,300)"
+  log_level: "list(debug|info|warning|error)"
+  worker_url: str?
+  ha_url: str?
+  ha_token: password?
+  mqtt_host: str?
+  mqtt_port: port?
+  mqtt_username: str?
+  mqtt_password: password?
