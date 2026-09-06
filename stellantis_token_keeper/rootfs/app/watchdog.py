@@ -195,7 +195,14 @@ class Watchdog:
             if user_input is None:
                 raise ReauthError(f"step {step} cannot be completed automatically")
             _LOGGER.info("Submitting step %s", step)
-            current = await self._ha.post_flow(flow_id, user_input)
+            try:
+                current = await self._ha.post_flow(flow_id, user_input)
+            except HaApiError as err:
+                if step == "oauth_remote" and "oauth_code_url" in str(err):
+                    raise ReauthError(
+                        "the installed Stellantis Vehicles integration has no 'Login service URL' field "
+                        "(needs version 2026.9.1 or newer) - update it via HACS and restart Home Assistant") from err
+                raise
         raise ReauthError("too many flow steps")
 
     def _answer(self, step: str, form: dict) -> dict | None:

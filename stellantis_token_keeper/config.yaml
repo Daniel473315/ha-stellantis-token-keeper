@@ -1,5 +1,5 @@
 name: "Stellantis Token Keeper"
-version: "0.1.3"
+version: "0.1.4"
 slug: "stellantis_token_keeper"
 description: "Self-hosted OAuth login worker and automatic re-authentication for the Stellantis Vehicles integration"
 url: "https://github.com/MarkusReuter/ha-stellantis-token-keeper"

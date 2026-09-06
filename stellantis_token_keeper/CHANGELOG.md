@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Clear error when the integration is too old for the 'Login service URL' field (< 2026.9.1)
+
 ## 0.1.3
 
 - Supervisor watchdog URL (`/health`), so a hung worker is restarted, not only a dead container
