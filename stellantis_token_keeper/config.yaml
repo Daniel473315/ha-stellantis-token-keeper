@@ -1,5 +1,5 @@
 name: "Stellantis Token Keeper"
-version: "0.1.0"
+version: "0.1.1"
 slug: "stellantis_token_keeper"
 description: "Self-hosted OAuth login worker and automatic re-authentication for the Stellantis Vehicles integration"
 url: "https://github.com/MarkusReuter/ha-stellantis-token-keeper"
@@ -25,8 +25,8 @@ options:
   login_timeout_seconds: 90
   log_level: info
 schema:
-  email: email
-  password: password
+  email: "str?"
+  password: "password?"
   check_interval_hours: "int(1,48)"
   reload_probe: bool
   remote_commands: bool

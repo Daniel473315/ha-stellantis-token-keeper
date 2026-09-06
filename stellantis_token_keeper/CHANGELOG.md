@@ -1,3 +1,8 @@
+## 0.1.1
+
+- `email` and `password` options may be empty, so the add-on starts as a plain login
+  worker before credentials are entered
+
 ## 0.1.0
 
 First version.
