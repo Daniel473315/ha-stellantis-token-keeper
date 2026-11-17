@@ -1,3 +1,4 @@
+
 ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-debian:bookworm
 FROM ${BUILD_FROM}
 
@@ -12,7 +13,7 @@ ENV LANG=C.UTF-8 \
 
 # Debian base (not Alpine): Playwright's Chromium needs glibc.
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends python3 python3-pip \
+    && apt-get install -y --no-install-recommends python3 python3-pip libatomic1 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
